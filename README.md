@@ -1,3 +1,6 @@
+# jira-time-calculator
+A utility to calculate time using day, hour, minute analogy of JIRA.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
