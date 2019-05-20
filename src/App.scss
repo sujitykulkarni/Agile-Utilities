@@ -1,36 +1,54 @@
 @import "styles/variables";
 @import "styles/colors";
+
+@mixin card() {
+  background: $card-background;
+  padding: ($base-grid-value * 2);
+  box-shadow: 0px 0px ($base-grid-value / 4) 0px #ccc;
+  border-radius: $button-border-radius;  
+}
 .App {
   text-align: center;
 }
 
 .App-header {
   background-color: $primary-color;
-  min-height: 40vh;
+  min-height: ($base-grid-value * 5);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: $primary-text-color-inverted;
-}
-
-.calculator {
-  padding: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: stretch;
-}
-
-.timeOutput {
-  position: -webkit-sticky;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
 }
 
+.calculator {
+  padding: $base-grid-value;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.timeOutput {
+  margin: ($base-grid-value * 2);
+  position: sticky;
+  bottom: ($base-grid-value * 2);
+  @include card();
+
+  &__title {
+    color: $primary-text-color;
+  }
+
+  &__value {
+    color: $primary-color;
+  }
+}
+
 .timeInput__table {
-  margin: 0 auto;
   border-collapse:separate; 
   border-spacing:($base-grid-value * 2) ($base-grid-value * 2);
 }
@@ -56,7 +74,6 @@ button {
   font-weight: bold;
   border-radius: $button-border-radius;
   outline: none;
-  min-width: ($base-grid-value * 30);
 }
 
 button:hover {

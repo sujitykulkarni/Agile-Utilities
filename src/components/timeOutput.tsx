@@ -4,11 +4,13 @@ interface IProps {
     output: IInput;
 }
 export class TimeOutput extends React.Component<IProps, any> {
-    constructor(props: IProps){
-        super(props);
-    }
     render() {
         const { days, hours, minutes } = this.props.output;
-        return <h1 className="timeOutput">{`${days} ${hours} ${minutes}`}</h1>
+        return (
+            <div className="timeOutput">
+                <h1 className="timeOutput__title">Total time</h1>            
+                <h3 className="timeOutput__value">{`${days} ${hours} ${minutes}`}</h3>
+            </div>
+        )
     }
 }
