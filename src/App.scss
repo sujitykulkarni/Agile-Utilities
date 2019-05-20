@@ -48,9 +48,17 @@
   }
 }
 
-.timeInput__table {
-  border-collapse:separate; 
-  border-spacing:($base-grid-value * 2) ($base-grid-value * 2);
+.timeInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  
+  &__table {
+    border-collapse:separate; 
+    border-spacing:($base-grid-value * 2) ($base-grid-value * 2);
+  }
+
 }
 
 table > tfoot > tr > td > button {
@@ -65,10 +73,8 @@ input[type="number"] {
 button {
   background: $primary-button-color;
   color:$primary-text-color;
-  border: ($base-grid-value / 4) solid $primary-border-color;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: none;
+  box-shadow: 0px 2px 0px 0px $primary-border-color;
   padding: ($base-grid-value * 2);
   font-size: ($base-grid-value * 2);
   font-weight: bold;
@@ -77,7 +83,8 @@ button {
 }
 
 button:hover {
-  border-bottom-width:  ($base-grid-value / 2);
+  box-shadow: 0px 4px 0px 0px $primary-border-color;
+  transform: translateY(-2px);
 }
 
 button:disabled {
