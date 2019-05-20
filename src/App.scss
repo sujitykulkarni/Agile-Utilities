@@ -1,0 +1,68 @@
+@import "styles/variables";
+@import "styles/colors";
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: $primary-color;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: $primary-text-color-inverted;
+}
+
+.calculator {
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.timeOutput {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.timeInput__table {
+  margin: 0 auto;
+  border-collapse:separate; 
+  border-spacing:($base-grid-value * 2) ($base-grid-value * 2);
+}
+
+table > tfoot > tr > td > button {
+  width: 100%;
+}
+
+input[type="number"] {
+  padding: ($base-grid-value * 2);
+  font-size: ($base-grid-value * 2);
+}
+
+button {
+  background: $primary-button-color;
+  color:$primary-text-color;
+  border: ($base-grid-value / 4) solid $primary-border-color;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: ($base-grid-value * 2);
+  font-size: ($base-grid-value * 2);
+  font-weight: bold;
+  border-radius: $button-border-radius;
+  outline: none;
+  min-width: ($base-grid-value * 30);
+}
+
+button:hover {
+  border-bottom-width:  ($base-grid-value / 2);
+}
+
+button:disabled {
+  color: $primary-button-text-color-disabled;
+}
