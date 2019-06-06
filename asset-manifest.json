@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jira-time-calculator/static/css/main.d491fab3.chunk.css",
-    "main.js": "/jira-time-calculator/static/js/main.53a1ccac.chunk.js",
-    "main.js.map": "/jira-time-calculator/static/js/main.53a1ccac.chunk.js.map",
+    "main.css": "/jira-time-calculator/static/css/main.abd848a5.chunk.css",
+    "main.js": "/jira-time-calculator/static/js/main.019af8d9.chunk.js",
+    "main.js.map": "/jira-time-calculator/static/js/main.019af8d9.chunk.js.map",
     "runtime~main.js": "/jira-time-calculator/static/js/runtime~main.d0bbcadf.js",
     "runtime~main.js.map": "/jira-time-calculator/static/js/runtime~main.d0bbcadf.js.map",
     "static/js/2.d6a534e5.chunk.js": "/jira-time-calculator/static/js/2.d6a534e5.chunk.js",
     "static/js/2.d6a534e5.chunk.js.map": "/jira-time-calculator/static/js/2.d6a534e5.chunk.js.map",
     "index.html": "/jira-time-calculator/index.html",
-    "precache-manifest.0063d7f72c75cb03200bc314815d67e8.js": "/jira-time-calculator/precache-manifest.0063d7f72c75cb03200bc314815d67e8.js",
+    "precache-manifest.156cfc4bc4b439954a085040fb8144af.js": "/jira-time-calculator/precache-manifest.156cfc4bc4b439954a085040fb8144af.js",
     "service-worker.js": "/jira-time-calculator/service-worker.js",
-    "static/css/main.d491fab3.chunk.css.map": "/jira-time-calculator/static/css/main.d491fab3.chunk.css.map"
+    "static/css/main.abd848a5.chunk.css.map": "/jira-time-calculator/static/css/main.abd848a5.chunk.css.map"
   }
 }
