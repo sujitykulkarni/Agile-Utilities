@@ -74,16 +74,26 @@ button {
   background: $primary-button-color;
   color:$primary-text-color;
   border: none;
-  box-shadow: 0px 2px 0px 0px $primary-border-color;
+  box-shadow: 0px 2px 0px 0px darken($primary-button-color, 10%);
   padding: ($base-grid-value * 2);
   font-size: ($base-grid-value * 2);
   font-weight: bold;
   border-radius: $button-border-radius;
   outline: none;
+  font-family: 'Open Sans', sans-serif;
+  
+  &.btn--accent {
+    background: $accent-color;
+    box-shadow: 0px 2px 0px 0px darken($accent-color, 20%);
+    color: $accent-text-color;
+    &:hover {
+      box-shadow: 0px 4px 0px 0px darken($accent-color, 20%);
+    }
+  }
 }
 
 button:hover {
-  box-shadow: 0px 4px 0px 0px $primary-border-color;
+  box-shadow: 0px 4px 0px 0px darken($primary-button-color, 10%);
   transform: translateY(-2px);
 }
 

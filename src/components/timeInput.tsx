@@ -51,7 +51,7 @@ export class TimeInput extends React.Component<IProps, IState> {
                                 <button onClick={this.reset}>Reset</button>
                             </td>
                             <td colSpan={3}>
-                                <button onClick={() => this.props.onCalculate(this.state.inputs)}>Count</button>                                
+                                <button onClick={() => this.props.onCalculate(this.state.inputs)} className="btn--accent">Count</button>                                
                             </td>
                         </tr>
                     </tfoot>

@@ -7,6 +7,7 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h1>JIRA Time Calculator</h1>
+        <p>A utility to calculate time using the day, hour, minute analogy of JIRA.</p>
       </header>
       <Calculator/>
     </div>
