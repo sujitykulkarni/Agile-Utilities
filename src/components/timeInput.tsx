@@ -2,6 +2,7 @@ import React from 'react';
 
 interface IProps {
     onCalculate(inputs: IInput[]): void;
+    onReset(): void;
 }
 interface IState {
     inputs: IInput[];
@@ -44,14 +45,11 @@ export class TimeInput extends React.Component<IProps, IState> {
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colSpan={1}>
-                                <button onClick={this.addRow}>Add</button>
+                            <td colSpan={2}>
+                                <button onClick={this.addRow} className="btn--accent">Add</button>
                             </td>
                             <td colSpan={1}>
                                 <button onClick={this.reset}>Reset</button>
-                            </td>
-                            <td colSpan={3}>
-                                <button onClick={() => this.props.onCalculate(this.state.inputs)} className="btn--accent">Count</button>                                
                             </td>
                         </tr>
                     </tfoot>
@@ -75,6 +73,7 @@ export class TimeInput extends React.Component<IProps, IState> {
     }
 
     private addRow = () => {
+        this.props.onCalculate(this.state.inputs);
         const defaultInput: IInput = {
             days: '',
             hours: '',
@@ -96,7 +95,8 @@ export class TimeInput extends React.Component<IProps, IState> {
         }
         this.setState({
             inputs,
-        })
+        });
+        this.props.onCalculate(this.state.inputs);
     }
 
     private handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -122,6 +122,7 @@ export class TimeInput extends React.Component<IProps, IState> {
         };
         this.setState({
             inputs: [defaultInput],
-        })
+        });
+        this.props.onReset();
     }
 }

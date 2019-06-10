@@ -5,22 +5,32 @@ import { TimeOutput } from './timeOutput';
 interface IState {
     output: IInput;
 }
-export class Calculator extends React.Component<any, IState> {
-    constructor(props: any) {
+
+const defaultOutput: IInput = {
+    days: '0 days',
+    hours: '0 hours',
+    minutes: '0 minutes',
+};
+
+/**
+ * A parent component that hosts time input and output
+ *
+ * @export
+ * @class Calculator
+ * @extends {React.Component<{}, IState>}
+ */
+export class Calculator extends React.Component<{}, IState> {
+    constructor(props: {}) {
         super(props);
         this.state = {
-            output: {
-                days: '0 days',
-                hours: '0 hours',
-                minutes: '0 minutes',
-            },
+            output: { ...defaultOutput},
         };
     }
     render() {
         return (
             <section className="calculator">
                 <TimeOutput output={this.state.output} />
-                <TimeInput onCalculate={this.handleCalculate} />
+                <TimeInput onCalculate={this.handleCalculate} onReset={this.handleOnReset}/>
             </section>
         )
     };
@@ -61,6 +71,13 @@ export class Calculator extends React.Component<any, IState> {
         });
         this.setState({
             output,
+        });
+    }
+
+    private handleOnReset = () => {
+        console.log('handleOnReset');
+        this.setState({
+            output: defaultOutput,
         });
     }
 }
