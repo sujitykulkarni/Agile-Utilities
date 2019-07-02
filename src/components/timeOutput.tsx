@@ -7,9 +7,11 @@ export class TimeOutput extends React.Component<IProps, any> {
     render() {
         const { days, hours, minutes } = this.props.output;
         return (
-            <div className="timeOutput">
-                <h1 className="timeOutput__title">Total time</h1>            
-                <h3 className="timeOutput__value">{`${days} ${hours} ${minutes}`}</h3>
+            <div className="card">
+                <div className="card-body">
+                    <h1 className="card-title">Total time</h1>
+                    <h4 className="text-primary">{`${days} ${hours} ${minutes}`}</h4>
+                </div>
             </div>
         )
     }

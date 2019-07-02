@@ -28,9 +28,13 @@ export class Calculator extends React.Component<{}, IState> {
     }
     render() {
         return (
-            <section className="calculator">
-                <TimeOutput output={this.state.output} />
-                <TimeInput onCalculate={this.handleCalculate} onReset={this.handleOnReset}/>
+            <section className="calculator row">
+                <div className="col align-self-end">
+                    <TimeOutput output={this.state.output} />
+                </div>
+                <div className="col-9">
+                    <TimeInput onCalculate={this.handleCalculate} onReset={this.handleOnReset}/>
+                </div>
             </section>
         )
     };
@@ -75,7 +79,6 @@ export class Calculator extends React.Component<{}, IState> {
     }
 
     private handleOnReset = () => {
-        console.log('handleOnReset');
         this.setState({
             output: defaultOutput,
         });
