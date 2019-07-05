@@ -1,5 +1,5 @@
 @import "styles/variables";
-
+@import "styles/switch";
 @mixin aside() {
   position: fixed;
   top: 0;
@@ -17,12 +17,6 @@
 }
 
 .App {
-  &__header {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-  }
-
   &__nav {
     & > ul {
       list-style-type: none;

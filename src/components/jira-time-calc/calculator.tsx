@@ -1,9 +1,18 @@
 import React from 'react';
-import { TimeInput, IInput } from './timeInput';
-import { TimeOutput } from './timeOutput';
+import { connect } from 'react-redux';
+import { TimeInput, IInput } from 'components/jira-time-calc/timeInput';
+import { TimeOutput } from 'components/jira-time-calc/timeOutput';
+import { IStore, ManHours } from 'redux/IStore';
+
+interface  IProps {}
 
 interface IState {
     output: IInput;
+}
+
+interface IStateProps {
+    manHours?: ManHours;
+    enableManHours: boolean;
 }
 
 const defaultOutput: IInput = {
@@ -12,6 +21,16 @@ const defaultOutput: IInput = {
     minutes: '0 minutes',
 };
 
+const mapStateToProps = () => {
+    return (state: IStore): IStateProps => {
+        const { settings: {manHours, enableManHours} } = state;
+        return {
+            manHours,
+            enableManHours,
+        }
+    }
+}
+
 /**
  * A parent component that hosts time input and output
  *
@@ -19,18 +38,18 @@ const defaultOutput: IInput = {
  * @class Calculator
  * @extends {React.Component<{}, IState>}
  */
-export class Calculator extends React.Component<{}, IState> {
-    constructor(props: {}) {
+class Calculator extends React.Component<IProps & IStateProps, IState> {
+    constructor(props: IProps & IStateProps) {
         super(props);
         this.state = {
-            output: { ...defaultOutput},
+            output: Object.assign({}, defaultOutput),
         };
     }
     render() {
         return (
             <section className="calculator row">
-                <div className="col align-self-end">
-                    <TimeOutput output={this.state.output} />
+                <div className="col mb-4 align-self-end">
+                    <TimeOutput output={this.state.output} asManHours={this.props.manHours ? true : false}/>
                 </div>
                 <div className="col-9">
                     <TimeInput onCalculate={this.handleCalculate} onReset={this.handleOnReset}/>
@@ -60,13 +79,22 @@ export class Calculator extends React.Component<{}, IState> {
         let totalDays = days;
         let totalHours = hours;
         let totalMinutes = minutes;
-        if (minutes >= 60) {
-            totalHours += ~~(minutes / 60);
-            totalMinutes = (minutes % 60);
+        const { enableManHours, manHours } = this.props; 
+        const { hours: maxHours, minutes: maxMinutes } = {hours: 24, minutes: 60};
+        if (minutes >= maxMinutes) {
+            totalHours += ~~(minutes / maxMinutes);
+            totalMinutes = (minutes % maxMinutes);
         }
-        if (totalHours >= 24) {
-            totalDays += ~~(totalHours / 24);
-            totalHours = (totalHours % 24);
+        if (totalHours >= maxHours) {
+            totalDays += ~~(totalHours / maxHours);
+            totalHours = (totalHours % maxHours);
+        }
+        if(enableManHours && manHours) {
+            const tempManHours = manHours.hours + (manHours.minutes / maxMinutes);
+            const tempHours = (totalDays * 24) + totalHours + (totalMinutes / maxMinutes);
+            totalDays = ~~(tempHours / tempManHours);
+            totalHours = ~~(tempHours % tempManHours);
+            totalMinutes = Math.abs(totalHours - (tempHours % tempManHours)) * 60;
         }
         const output = Object.assign(this.state.output, {
             days: `${totalDays} days`,
@@ -84,3 +112,5 @@ export class Calculator extends React.Component<{}, IState> {
         });
     }
 }
+
+export default connect(mapStateToProps)(Calculator);

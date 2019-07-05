@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faUndo, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 interface IProps {
     onCalculate(inputs: IInput[]): void;
@@ -46,10 +48,14 @@ export class TimeInput extends React.Component<IProps, IState> {
                     <tfoot>
                         <tr>
                             <td colSpan={2}>
-                                <button onClick={this.addRow} className="btn btn-primary btn-lg btn-block">Add</button>
+                                <button onClick={this.addRow} className="btn btn-primary btn-lg btn-block">
+                                    <FontAwesomeIcon icon={faPlus}/>
+                                </button>
                             </td>
                             <td colSpan={1}>
-                                <button onClick={this.reset} className="btn btn-lg btn-secondary btn-block">Reset</button>
+                                <button onClick={this.reset} className="btn btn-lg btn-secondary btn-block">
+                                <FontAwesomeIcon icon={faUndo}/>
+                                </button>
                             </td>
                         </tr>
                     </tfoot>
@@ -66,7 +72,11 @@ export class TimeInput extends React.Component<IProps, IState> {
                     <td><input type="number" value={input.days} onChange={this.handleInputChange} data-key={index} data-type="days" onKeyDown={this.handleKeyDown} className="form-control form-control-lg" /></td>
                     <td><input type="number" value={input.hours} onChange={this.handleInputChange} data-key={index} data-type="hours" onKeyDown={this.handleKeyDown} className="form-control form-control-lg" /></td>
                     <td><input type="number" value={input.minutes} onChange={this.handleInputChange} data-key={index} data-type="minutes" onKeyDown={this.handleKeyDown} className="form-control form-control-lg" /></td>
-                    <td><button onClick={this.removeRow} data-key={index} disabled={(inputs.length === 1) ? true : false} className="btn btn-lg btn-block btn-light">Remove</button></td>
+                    <td>
+                        <button onClick={this.removeRow} data-key={index} disabled={(inputs.length === 1) ? true : false} className="btn btn-lg btn-block btn-light">
+                            <FontAwesomeIcon icon={faTrashAlt}/>
+                        </button>
+                    </td>
                 </tr>
             );
         });
