@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jira-time-calculator/precache-manifest.dc89c826cf5e17654188132f3204cb9e.js"
+  "/jira-time-calculator/precache-manifest.73f549b6d23cec0c508dca0d8ff241b1.js"
 );
 
 self.addEventListener('message', (event) => {

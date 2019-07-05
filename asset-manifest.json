@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/jira-time-calculator/static/css/main.abd848a5.chunk.css",
-    "main.js": "/jira-time-calculator/static/js/main.de3943d6.chunk.js",
-    "main.js.map": "/jira-time-calculator/static/js/main.de3943d6.chunk.js.map",
+    "main.css": "/jira-time-calculator/static/css/main.aedee2af.chunk.css",
+    "main.js": "/jira-time-calculator/static/js/main.a1604098.chunk.js",
+    "main.js.map": "/jira-time-calculator/static/js/main.a1604098.chunk.js.map",
     "runtime~main.js": "/jira-time-calculator/static/js/runtime~main.d0bbcadf.js",
     "runtime~main.js.map": "/jira-time-calculator/static/js/runtime~main.d0bbcadf.js.map",
-    "static/js/2.dc155f86.chunk.js": "/jira-time-calculator/static/js/2.dc155f86.chunk.js",
-    "static/js/2.dc155f86.chunk.js.map": "/jira-time-calculator/static/js/2.dc155f86.chunk.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/jira-time-calculator/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.6a684156.chunk.js": "/jira-time-calculator/static/js/2.6a684156.chunk.js",
+    "static/js/2.6a684156.chunk.js.map": "/jira-time-calculator/static/js/2.6a684156.chunk.js.map",
     "index.html": "/jira-time-calculator/index.html",
-    "precache-manifest.dc89c826cf5e17654188132f3204cb9e.js": "/jira-time-calculator/precache-manifest.dc89c826cf5e17654188132f3204cb9e.js",
+    "precache-manifest.73f549b6d23cec0c508dca0d8ff241b1.js": "/jira-time-calculator/precache-manifest.73f549b6d23cec0c508dca0d8ff241b1.js",
     "service-worker.js": "/jira-time-calculator/service-worker.js",
-    "static/css/main.abd848a5.chunk.css.map": "/jira-time-calculator/static/css/main.abd848a5.chunk.css.map"
+    "static/css/2.22a7d4ef.chunk.css.map": "/jira-time-calculator/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.aedee2af.chunk.css.map": "/jira-time-calculator/static/css/main.aedee2af.chunk.css.map"
   }
 }
