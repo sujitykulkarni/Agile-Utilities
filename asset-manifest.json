@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/jira-time-calculator/static/css/main.aedee2af.chunk.css",
-    "main.js": "/jira-time-calculator/static/js/main.a1604098.chunk.js",
-    "main.js.map": "/jira-time-calculator/static/js/main.a1604098.chunk.js.map",
-    "runtime~main.js": "/jira-time-calculator/static/js/runtime~main.d0bbcadf.js",
-    "runtime~main.js.map": "/jira-time-calculator/static/js/runtime~main.d0bbcadf.js.map",
-    "static/css/2.22a7d4ef.chunk.css": "/jira-time-calculator/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.6a684156.chunk.js": "/jira-time-calculator/static/js/2.6a684156.chunk.js",
-    "static/js/2.6a684156.chunk.js.map": "/jira-time-calculator/static/js/2.6a684156.chunk.js.map",
-    "index.html": "/jira-time-calculator/index.html",
-    "precache-manifest.73f549b6d23cec0c508dca0d8ff241b1.js": "/jira-time-calculator/precache-manifest.73f549b6d23cec0c508dca0d8ff241b1.js",
-    "service-worker.js": "/jira-time-calculator/service-worker.js",
-    "static/css/2.22a7d4ef.chunk.css.map": "/jira-time-calculator/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.aedee2af.chunk.css.map": "/jira-time-calculator/static/css/main.aedee2af.chunk.css.map"
+    "main.css": "/Agile-Utilities/static/css/main.aedee2af.chunk.css",
+    "main.js": "/Agile-Utilities/static/js/main.bf6ba583.chunk.js",
+    "main.js.map": "/Agile-Utilities/static/js/main.bf6ba583.chunk.js.map",
+    "runtime~main.js": "/Agile-Utilities/static/js/runtime~main.1d8759b4.js",
+    "runtime~main.js.map": "/Agile-Utilities/static/js/runtime~main.1d8759b4.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/Agile-Utilities/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.6a684156.chunk.js": "/Agile-Utilities/static/js/2.6a684156.chunk.js",
+    "static/js/2.6a684156.chunk.js.map": "/Agile-Utilities/static/js/2.6a684156.chunk.js.map",
+    "index.html": "/Agile-Utilities/index.html",
+    "precache-manifest.ed8e35b7b9843d10cee302827da4ceb1.js": "/Agile-Utilities/precache-manifest.ed8e35b7b9843d10cee302827da4ceb1.js",
+    "service-worker.js": "/Agile-Utilities/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/Agile-Utilities/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.aedee2af.chunk.css.map": "/Agile-Utilities/static/css/main.aedee2af.chunk.css.map"
   }
 }
