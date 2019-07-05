@@ -1,6 +1,14 @@
-# jira-time-calculator
-A utility to calculate time using day, hour, minute analogy of JIRA.
+# Agile Utilities
+A set of helpful utilities for Agile practitioners and followers.
+Below is a list of utilities that I have created so far.
 
+1. [JIRA Time Calculator](/docs/JIRA_TIME_CALCULATOR.md)
+2. [Rough Estimator](/docs/ROUGH_ESTIMATOR.md)
+
+##### But there are better utilities than this in market..
+Yes there are. This whole project is created as part of my 'React' learning. But why not publish it in open source if it solves a problem? If not fancy, and too little for too much, at least this might help others learn code that I created, find loopholes, fork and improve in unimaginable ways.
+
+## Configuration
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
