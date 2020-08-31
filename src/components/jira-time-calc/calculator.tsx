@@ -3,24 +3,24 @@ import { connect } from 'react-redux';
 import { TimeInput, IInput } from 'components/jira-time-calc/timeInput';
 import { TimeOutput } from 'components/jira-time-calc/timeOutput';
 import { IStore, ManHours } from 'redux/IStore';
-
+/* Props */
 interface  IProps {}
-
+/* State */
 interface IState {
     output: IInput;
 }
-
+/* Props received from store */
 interface IStateProps {
     manHours?: ManHours;
     enableManHours: boolean;
 }
-
+/* Deafult values when app loads */
 const defaultOutput: IInput = {
     days: '0 days',
     hours: '0 hours',
     minutes: '0 minutes',
 };
-
+/* Get store values */
 const mapStateToProps = () => {
     return (state: IStore): IStateProps => {
         const { settings: {manHours, enableManHours} } = state;
@@ -34,9 +34,8 @@ const mapStateToProps = () => {
 /**
  * A parent component that hosts time input and output
  *
- * @export
  * @class Calculator
- * @extends {React.Component<{}, IState>}
+ * @extends {(React.Component<IProps & IStateProps, IState>)}
  */
 class Calculator extends React.Component<IProps & IStateProps, IState> {
     constructor(props: IProps & IStateProps) {
@@ -57,14 +56,19 @@ class Calculator extends React.Component<IProps & IStateProps, IState> {
             </section>
         )
     };
-
+    /**
+     * Accumulates the total values entered
+     *
+     * @private
+     * @memberof Calculator
+     */
     private handleCalculate = (inputs: IInput[]) => {
         const days = inputs.map(input => this.stripChars(input.days)).reduce(this.getTotalTime, 0);
         const hours = inputs.map(input => this.stripChars(input.hours)).reduce(this.getTotalTime, 0);
         const minutes = inputs.map(input => this.stripChars(input.minutes)).reduce(this.getTotalTime, 0);
         this.sanitizeTime(days, hours, minutes);
     }
-
+    
     private stripChars = (value: string): number => {
         const pattern = /\D/g;
         if (value) {
