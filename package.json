@@ -2,7 +2,7 @@
   "name": "jira-time",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sujitykulkarni.github.io/jira-time-calculator",
+  "homepage": "https://sujitykulkarni.github.io/Agile-Utilities/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
@@ -23,6 +23,16 @@
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
     "typescript": "3.4.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,6 +58,8 @@
     ]
   },
   "devDependencies": {
+    "commitizen": "^4.2.1",
+    "husky": "^4.2.5",
     "redux-devtools": "^3.5.0"
   }
 }
